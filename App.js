@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-useEffect(() => {
+export default function App() {
+
+  useEffect(() => {
     async function carregarFonte() {
       await Font.loadAsync({
         pixel: require('./assets/fonts/PressStart2P-Regular.ttf'),
@@ -58,9 +60,6 @@ useEffect(() => {
 
   if (!fonteCarregada) return null;
 
-
-
-export default function App() {
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
